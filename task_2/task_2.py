@@ -11,6 +11,6 @@ print("time taken: ",taken_time)
 new_array=array.tobytes()
 
 #recreate array from bytes
-recreated_array=np.frombuffer(new_array)
+recreated_array=np.frombuffer(new_array,dtype=array.dtype).reshape(array.shape)
 print(recreated_array)
 
